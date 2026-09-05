@@ -1,0 +1,86 @@
+{{ template "dashboard_top" . }}
+
+<div class="main-content-container overflow-hidden">
+	<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+		<h3 class="mb-0">{{ .title }}</h3>
+		<a href="/dashboard/cms/products" class="btn btn-outline-secondary py-2 px-3">Back to Products</a>
+	</div>
+
+	{{ if .flash }}<div class="alert alert-info">{{ .flash }}</div>{{ end }}
+
+	<div class="card bg-white border-0 rounded-3 mb-4">
+		<div class="card-body p-4">
+			<form method="post" action="{{ if .isEdit }}/dashboard/cms/products/{{ .product.ID }}{{ else }}/dashboard/cms/products{{ end }}">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Name *</label>
+							<input type="text" name="name" class="form-control" required value="{{ .product.Name }}" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">SKU</label>
+							<input type="text" name="sku" class="form-control" value="{{ .product.SKU }}" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Status</label>
+							<select name="status" class="form-select form-control">
+								<option value="active" {{ if eq .product.Status "active" }}selected{{ end }}>Active</option>
+								<option value="draft" {{ if eq .product.Status "draft" }}selected{{ end }}>Draft</option>
+								<option value="archived" {{ if eq .product.Status "archived" }}selected{{ end }}>Archived</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Price *</label>
+							<input type="number" step="0.01" min="0" name="price" class="form-control" required value="{{ .product.Price }}" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Sale Price</label>
+							<input type="number" step="0.01" min="0" name="sale_price" class="form-control" value="{{ if .product.SalePrice }}{{ deref64 .product.SalePrice }}{{ end }}" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Stock</label>
+							<input type="number" name="stock" class="form-control" value="{{ .product.Stock }}" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Category</label>
+							<select name="category_id" class="form-select form-control">
+								<option value="">— none —</option>
+								{{ $cid := .product.CategoryID }}
+								{{ range .categories }}
+								<option value="{{ .ID }}" {{ if $cid }}{{ if eq .ID (deref $cid) }}selected{{ end }}{{ end }}>{{ .Name }}</option>
+								{{ end }}
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Image URL</label>
+							<input type="text" name="image" class="form-control" value="{{ .product.Image }}" placeholder="/uploads/2026/09/product.png" />
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Description</label>
+							<textarea name="description" class="form-control" rows="6">{{ .product.Description }}</textarea>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary py-2 px-4">Save Product</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+{{ template "dashboard_bottom" . }}

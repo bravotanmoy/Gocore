@@ -1,0 +1,84 @@
+{{ template "dashboard_top" . }}
+
+<div class="main-content-container overflow-hidden">
+	<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+		<h3 class="mb-0">Categories</h3>
+		<a href="/dashboard/cms/posts" class="btn btn-outline-secondary py-2 px-3">Back to Posts</a>
+	</div>
+
+	{{ if .flash }}<div class="alert alert-info">{{ .flash }}</div>{{ end }}
+
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="card bg-white border-0 rounded-3 mb-4">
+				<div class="card-body p-4">
+					<h5 class="fs-16 mb-3">Add Category</h5>
+					<form method="post" action="/dashboard/cms/categories">
+						<div class="form-group mb-3">
+							<label class="label text-secondary mb-1">Name *</label>
+							<input type="text" name="name" class="form-control" required placeholder="e.g. Technology" />
+						</div>
+						<div class="form-group mb-3">
+							<label class="label text-secondary mb-1">Type</label>
+							<select name="type" class="form-select form-control">
+								<option value="post">Post (blog)</option>
+								<option value="product">Product (shop)</option>
+							</select>
+						</div>
+						<div class="form-group mb-3">
+							<label class="label text-secondary mb-1">Description</label>
+							<input type="text" name="description" class="form-control" />
+						</div>
+						<button type="submit" class="btn btn-primary w-100 py-2">Add Category</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-8">
+			<div class="card bg-white border-0 rounded-3 mb-4">
+				<div class="card-body p-0">
+					<div class="default-table-area style-two default-table-width">
+						<div class="table-responsive">
+							<table class="table align-middle">
+								<thead>
+									<tr>
+										<th scope="col">ID</th>
+										<th scope="col">Name</th>
+										<th scope="col">Slug</th>
+										<th scope="col">Type</th>
+										<th scope="col">Description</th>
+										<th scope="col">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									{{ range .categories }}
+									<tr>
+										<td class="text-body">#{{ .ID }}</td>
+										<td><h6 class="mb-0 fs-14 fw-medium">{{ .Name }}</h6></td>
+										<td class="text-body">{{ .Slug }}</td>
+										<td>
+											<span class="badge bg-opacity-10 {{ if eq .Type "product" }}bg-info text-info{{ else }}bg-primary text-primary{{ end }}">{{ .Type }}</span>
+										</td>
+										<td class="text-body">{{ .Description }}</td>
+										<td>
+											<form method="post" action="/dashboard/cms/categories/{{ .ID }}/delete" onsubmit="return confirm('Delete this category?');" class="d-inline">
+												<button type="submit" class="ps-0 border-0 bg-transparent lh-1 position-relative top-2" title="Delete">
+													<i class="material-symbols-outlined fs-16 text-danger">delete</i>
+												</button>
+											</form>
+										</td>
+									</tr>
+									{{ else }}
+									<tr><td colspan="6" class="text-center text-body py-4">No categories yet</td></tr>
+									{{ end }}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ template "dashboard_bottom" . }}

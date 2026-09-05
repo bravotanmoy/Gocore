@@ -1,0 +1,18 @@
+{{ template "dashboard_top" . }}
+
+<div class="main-content-container overflow-hidden">
+	<div class="card bg-white border-0 rounded-3 mb-4">
+		<div class="card-body p-5 text-center">
+			<i class="material-symbols-outlined text-danger" style="font-size: 64px">lock</i>
+			<h3 class="mt-3">Access Denied</h3>
+			<p class="text-body">
+				You don't have the required permission
+				{{ if .permission }}(<code>{{ .permission }}</code>){{ end }}
+				to view this page. Ask an administrator to grant it to your role.
+			</p>
+			<a href="/dashboard/cms" class="btn btn-primary py-2 px-4 mt-2">Back to Overview</a>
+		</div>
+	</div>
+</div>
+
+{{ template "dashboard_bottom" . }}

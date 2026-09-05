@@ -1,0 +1,1764 @@
+{{ template "dashboard_top" . }}
+
+<div class="main-content-container overflow-hidden">
+	<div class="row">
+		<div class="col-xxl-8">
+			<div class="card custom-shadow rounded-3 bg-white border mb-4">
+				<div class="custom-padding-30">
+					<div
+						class="d-flex justify-content-between align-items-center flex-wrap gap-3 pb-4"
+					>
+						<h3 class="mb-0 fw-semibold">Overview</h3>
+						<div class="dropdown select-dropdown">
+							<button
+								class="dropdown-toggle bg-transparent border text-body rounded-2"
+								style="padding-right: 35px"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								This Year
+							</button>
+
+							<ul
+								class="dropdown-menu dropdown-menu-end bg-white border-0 box-shadow py-3"
+							>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										This Day
+									</button>
+								</li>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										This Week
+									</button>
+								</li>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										This Month
+									</button>
+								</li>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										This Year
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="nav-tab" class="call-overview-tabs" role="tablist">
+						<div class="row justify-content-center">
+							<div class="col-md-4 col-sm-6">
+								<div
+									class="card bg-primary bg-opacity-10 border-0 rounded-3 p-4 mb-4 calls-card active"
+									id="nav-total-calls-tab"
+									data-bs-toggle="tab"
+									data-bs-target="#nav-total-calls"
+									type="button"
+									role="tab"
+									aria-controls="nav-total-calls"
+									aria-selected="true"
+								>
+									<div class="d-flex align-items-center mb-3">
+										<div class="flex-grow-1 me-3">
+											<span class="text-body d-block mb-1"
+												>Total Calls</span
+											>
+											<h3
+												class="fs-24 fw-semibold text-secondary"
+											>
+												26,435
+											</h3>
+										</div>
+
+										<div class="flex-shrink-0">
+											<img
+												src="/assets/images/total-calls.svg"
+												alt="total-calls"
+											/>
+										</div>
+									</div>
+									<span
+										class="d-flex align-items-center align-items-center text-body"
+									>
+										<i
+											class="material-symbols-outlined fs-18 pe-2 position-relative top-1 text-success"
+											>trending_up</i
+										>
+										<span
+											class="fw-medium me-1 text-secondary"
+											>+15%</span
+										>
+										last year
+									</span>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<div
+									class="card bg-primary-divs border-0 rounded-3 p-4 mb-4 calls-card"
+									id="nav-answered-calls-tab"
+									data-bs-toggle="tab"
+									data-bs-target="#nav-answered-calls"
+									type="button"
+									role="tab"
+									aria-controls="nav-answered-calls"
+									aria-selected="false"
+									style="background-color: #faf5ff"
+								>
+									<div class="d-flex align-items-center mb-3">
+										<div class="flex-grow-1 me-3">
+											<span class="text-body d-block mb-1"
+												>Answered Calls</span
+											>
+											<h3
+												class="fs-24 fw-semibold text-secondary"
+											>
+												18,520
+											</h3>
+										</div>
+
+										<div class="flex-shrink-0">
+											<img
+												src="/assets/images/answered-calls.svg"
+												alt="answered-calls"
+											/>
+										</div>
+									</div>
+									<span
+										class="d-flex align-items-center align-items-center text-body"
+									>
+										<i
+											class="material-symbols-outlined fs-18 pe-2 position-relative top-1 text-success-60"
+											>trending_up</i
+										>
+										<span
+											class="fw-medium me-1 text-secondary"
+											>+15%</span
+										>
+										last year
+									</span>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div
+									class="card bg-dangers border-0 rounded-3 p-4 mb-4 calls-card"
+									id="nav-missed-calls-tab"
+									data-bs-toggle="tab"
+									data-bs-target="#nav-missed-calls"
+									type="button"
+									role="tab"
+									aria-controls="nav-missed-calls"
+									aria-selected="false"
+									style="background-color: #fff5ed"
+								>
+									<div class="d-flex align-items-center mb-3">
+										<div class="flex-grow-1 me-3">
+											<span class="text-body d-block mb-1"
+												>Missed Calls</span
+											>
+											<h3
+												class="fs-24 fw-semibold text-secondary"
+											>
+												3,735
+											</h3>
+										</div>
+
+										<div class="flex-shrink-0">
+											<img
+												src="/assets/images/missed-calls.svg"
+												alt="missed-calls"
+											/>
+										</div>
+									</div>
+									<span
+										class="d-flex align-items-center align-items-center text-body"
+									>
+										<i
+											class="material-symbols-outlined fs-18 pe-2 position-relative top-1 text-danger-50"
+											>trending_down</i
+										>
+										<span
+											class="fw-medium me-1 text-secondary"
+											>-25%</span
+										>
+										last year
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-content" id="nav-tabContent">
+						<div
+							class="tab-pane fade show active"
+							id="nav-total-calls"
+							role="tabpanel"
+							aria-labelledby="nav-total-calls-tab"
+							tabindex="0"
+						>
+							<div style="margin: -24px -10px -26px -18px">
+								<div id="total_calls"></div>
+							</div>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="nav-answered-calls"
+							role="tabpanel"
+							aria-labelledby="nav-answered-calls-tab"
+							tabindex="0"
+						>
+							<div style="margin: -24px -10px -26px -18px">
+								<div id="answered_calls"></div>
+							</div>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="nav-missed-calls"
+							role="tabpanel"
+							aria-labelledby="nav-missed-calls-tab"
+							tabindex="0"
+						>
+							<div style="margin: -24px -10px -26px -18px">
+								<div id="missed_calls"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xxl-4">
+			<div class="row">
+				<div class="col-xxl-12 col-md-6">
+					<div
+						class="card custom-shadow rounded-3 bg-white border mb-4"
+					>
+						<div class="custom-padding-30">
+							<div
+								class="d-flex justify-content-between align-items-center flex-wrap gap-1 pb-4 position-relative z-1"
+							>
+								<div>
+									<h3 class="mb-0 fw-semibold">
+										Inbound Calls
+									</h3>
+									<span class="fs-12"
+										>Overview of incoming call volume</span
+									>
+								</div>
+								<div
+									class="dropdown select-dropdown without-border position-relative"
+									style="right: -5px"
+								>
+									<button
+										class="dropdown-toggle bg-transparent border text-body rounded-2"
+										style="padding-right: 20px"
+										role="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										Today
+									</button>
+
+									<ul
+										class="dropdown-menu dropdown-menu-end bg-white border-0 box-shadow py-3"
+									>
+										<li>
+											<button
+												class="dropdown-item text-secondary py-2 px-3"
+											>
+												Today
+											</button>
+										</li>
+										<li>
+											<button
+												class="dropdown-item text-secondary py-2 px-3"
+											>
+												Last Week
+											</button>
+										</li>
+										<li>
+											<button
+												class="dropdown-item text-secondary py-2 px-3"
+											>
+												Last Month
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div style="margin: -53px -9px -30px -11px">
+								<div id="inbound_calls"></div>
+							</div>
+
+							<div
+								class="d-flex align-items-center position-relative z-1"
+							>
+								<div class="d-flex align-items-center">
+									<div class="flex-shrink-0">
+										<div
+											class="bg-body-bg border text-center rounded-2"
+											style="
+												width: 48px;
+												height: 48px;
+												line-height: 48px;
+											"
+										>
+											<img
+												src="/assets/images/inbound-calls.svg"
+												alt="inbound-calls"
+											/>
+										</div>
+									</div>
+									<div class="flex-grow-1 ms-3">
+										<h3
+											class="fs-28 fw-semibold text-secondary mb-0"
+										>
+											1,235
+										</h3>
+										<span class="text-body d-block"
+											>Past 24 hours</span
+										>
+									</div>
+								</div>
+
+								<span
+									class="d-flex align-items-center align-items-center text-body ms-5"
+								>
+									<i
+										class="material-symbols-outlined fs-18 pe-2 text-success-60"
+										>trending_up</i
+									>
+									<span class="fw-medium me-1 text-secondary"
+										>+7.5%</span
+									>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xxl-12 col-md-6">
+					<div
+						class="card custom-shadow rounded-3 bg-white border mb-4"
+					>
+						<div class="custom-padding-30">
+							<div
+								class="d-flex justify-content-between align-items-center flex-wrap gap-1 pb-4 position-relative z-1"
+							>
+								<div>
+									<h3 class="mb-0 fw-semibold">
+										Outbound Calls
+									</h3>
+									<span class="fs-12"
+										>Summary of outgoing call efforts</span
+									>
+								</div>
+								<div
+									class="dropdown select-dropdown without-border position-relative"
+									style="right: -5px"
+								>
+									<button
+										class="dropdown-toggle bg-transparent border text-body rounded-2"
+										style="padding-right: 20px"
+										role="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										Last Month
+									</button>
+
+									<ul
+										class="dropdown-menu dropdown-menu-end bg-white border-0 box-shadow py-3"
+									>
+										<li>
+											<button
+												class="dropdown-item text-secondary py-2 px-3"
+											>
+												Today
+											</button>
+										</li>
+										<li>
+											<button
+												class="dropdown-item text-secondary py-2 px-3"
+											>
+												Last Week
+											</button>
+										</li>
+										<li>
+											<button
+												class="dropdown-item text-secondary py-2 px-3"
+											>
+												Last Month
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div style="margin: -53px -9px -30px -11px">
+								<div id="outbound_calls"></div>
+							</div>
+
+							<div
+								class="d-flex align-items-center position-relative z-1"
+							>
+								<div class="d-flex align-items-center">
+									<div class="flex-shrink-0">
+										<div
+											class="bg-body-bg border text-center rounded-2"
+											style="
+												width: 48px;
+												height: 48px;
+												line-height: 48px;
+											"
+										>
+											<img
+												src="/assets/images/outbound-calls.svg"
+												alt="outbound-calls"
+											/>
+										</div>
+									</div>
+									<div class="flex-grow-1 ms-3">
+										<h3
+											class="fs-28 fw-semibold text-secondary mb-0"
+										>
+											8,90
+										</h3>
+										<span class="text-body d-block"
+											>Last month</span
+										>
+									</div>
+								</div>
+
+								<span
+									class="d-flex align-items-center align-items-center text-body ms-5"
+								>
+									<i
+										class="material-symbols-outlined fs-18 pe-2 text-danger-50"
+										>trending_down</i
+									>
+									<span class="fw-medium me-1 text-secondary"
+										>-5.8%</span
+									>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-7 col-xxl-6">
+			<div class="card custom-shadow rounded-3 bg-white border mb-4">
+				<div class="custom-padding-30">
+					<div
+						class="d-flex justify-content-between align-items-center flex-wrap gap-2 gap-sm-3 pb-4 mb-2"
+					>
+						<h3 class="mb-0 fw-semibold">
+							Agents Performance Overview
+						</h3>
+						<div
+							class="dropdown select-dropdown without-border position-relative"
+							style="right: -5px"
+						>
+							<button
+								class="dropdown-toggle bg-transparent border text-body rounded-2"
+								style="padding-right: 20px"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								Last Month
+							</button>
+
+							<ul
+								class="dropdown-menu dropdown-menu-end bg-white border-0 box-shadow py-3"
+							>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										Today
+									</button>
+								</li>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										Last Week
+									</button>
+								</li>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										Last Month
+									</button>
+								</li>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										Last Year
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="row mb-4 pb-2">
+						<div class="col-lg-12">
+							<span class="d-block mb-3 fw-normal"
+								>Top Performing Agent</span
+							>
+						</div>
+						<div class="col-sm-4">
+							<div class="d-flex align-items-center">
+								<div
+									class="flex-shrink-0 position-relative z-1"
+								>
+									<img
+										src="/assets/images/user-161.png"
+										class="rounded-2"
+										alt="user"
+									/>
+									<span
+										class="bg-success rounded-circle d-inline-block position-absolute top-50 start-100 translate-middle"
+										style="width: 8px; height: 8px"
+									></span>
+								</div>
+								<div class="flex-grow-1 ms-10">
+									<h4 class="fs-14 fw-semibold mb-0">
+										John Smith
+									</h4>
+									<span class="text-secondary"
+										>380 Calls</span
+									>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-8 mt-2 mt-sm-0">
+							<div class="ms-sm-4 ps-sm-3">
+								<div
+									class="d-flex justify-content-between align-items-center mb-2"
+								>
+									<span>Customer Satisfaction (CSAT)</span>
+									<span>92%</span>
+								</div>
+								<div
+									class="progress bg-border-color"
+									role="progressbar"
+									aria-label="Success example"
+									aria-valuenow="92"
+									aria-valuemin="0"
+									aria-valuemax="100"
+									style="height: 6px"
+								>
+									<div
+										class="progress-bar bg-success-60 rounded-pill"
+										style="width: 92%; height: 6px"
+									></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="default-table-area style-three agents-performance-overview"
+					>
+						<div class="table-responsive">
+							<table class="table align-middle border-0">
+								<tbody>
+									<tr>
+										<td>
+											<div
+												class="d-flex align-items-center"
+											>
+												<div
+													class="flex-shrink-0 position-relative z-1"
+												>
+													<img
+														src="/assets/images/user-162.png"
+														class="rounded-2"
+														alt="user"
+													/>
+													<span
+														class="bg-success rounded-circle d-inline-block position-absolute top-50 start-100 translate-middle"
+														style="
+															width: 8px;
+															height: 8px;
+														"
+													></span>
+												</div>
+												<div class="flex-grow-1 ms-10">
+													<h4
+														class="fs-14 fw-medium mb-0"
+													>
+														Sarah Davis
+													</h4>
+													<span class="text-secondary"
+														>65 Calls</span
+													>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span class="text-body"
+												>Avg. Call Duration</span
+											>
+											<span class="fw-medium d-block"
+												>4 mins 10 secs</span
+											>
+										</td>
+										<td>
+											<span class="text-body">FCR</span>
+											<span class="fw-medium d-block"
+												>85%</span
+											>
+										</td>
+										<td>
+											<span class="text-body">CSAT</span>
+											<span class="fw-medium d-block"
+												>90%</span
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="bg-white"
+											style="padding: 5px !important"
+										></td>
+									</tr>
+									<tr>
+										<td>
+											<div
+												class="d-flex align-items-center"
+											>
+												<div
+													class="flex-shrink-0 position-relative z-1"
+												>
+													<img
+														src="/assets/images/user-163.png"
+														class="rounded-2"
+														alt="user"
+													/>
+													<span
+														class="bg-danger rounded-circle d-inline-block position-absolute top-50 start-100 translate-middle"
+														style="
+															width: 8px;
+															height: 8px;
+														"
+													></span>
+												</div>
+												<div class="flex-grow-1 ms-10">
+													<h4
+														class="fs-14 fw-medium mb-0"
+													>
+														Michael Brown
+													</h4>
+													<span class="text-secondary"
+														>58 Calls</span
+													>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span class="text-body"
+												>Avg. Call Duration</span
+											>
+											<span class="fw-medium d-block"
+												>5 mins 20 secs</span
+											>
+										</td>
+										<td>
+											<span class="text-body">FCR</span>
+											<span class="fw-medium d-block"
+												>82%</span
+											>
+										</td>
+										<td>
+											<span class="text-body">CSAT</span>
+											<span class="fw-medium d-block"
+												>87%</span
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="bg-white"
+											style="padding: 5px !important"
+										></td>
+									</tr>
+									<tr>
+										<td>
+											<div
+												class="d-flex align-items-center"
+											>
+												<div
+													class="flex-shrink-0 position-relative z-1"
+												>
+													<img
+														src="/assets/images/user-164.png"
+														class="rounded-2"
+														alt="user"
+													/>
+													<span
+														class="bg-success rounded-circle d-inline-block position-absolute top-50 start-100 translate-middle"
+														style="
+															width: 8px;
+															height: 8px;
+														"
+													></span>
+												</div>
+												<div class="flex-grow-1 ms-10">
+													<h4
+														class="fs-14 fw-medium mb-0"
+													>
+														Emily Johnson
+													</h4>
+													<span class="text-secondary"
+														>72 Calls</span
+													>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span class="text-body"
+												>Avg. Call Duration</span
+											>
+											<span class="fw-medium d-block"
+												>4 mins 30 secs</span
+											>
+										</td>
+										<td>
+											<span class="text-body">FCR</span>
+											<span class="fw-medium d-block"
+												>88%</span
+											>
+										</td>
+										<td>
+											<span class="text-body">CSAT</span>
+											<span class="fw-medium d-block"
+												>90%</span
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="bg-white"
+											style="padding: 5px !important"
+										></td>
+									</tr>
+									<tr>
+										<td>
+											<div
+												class="d-flex align-items-center"
+											>
+												<div
+													class="flex-shrink-0 position-relative z-1"
+												>
+													<img
+														src="/assets/images/user-165.png"
+														class="rounded-2"
+														alt="user"
+													/>
+													<span
+														class="bg-danger rounded-circle d-inline-block position-absolute top-50 start-100 translate-middle"
+														style="
+															width: 8px;
+															height: 8px;
+														"
+													></span>
+												</div>
+												<div class="flex-grow-1 ms-10">
+													<h4
+														class="fs-14 fw-medium mb-0"
+													>
+														David Lee
+													</h4>
+													<span class="text-secondary"
+														>53 Calls</span
+													>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span class="text-body"
+												>Avg. Call Duration</span
+											>
+											<span class="fw-medium d-block"
+												>3 mins 50 secs</span
+											>
+										</td>
+										<td>
+											<span class="text-body">FCR</span>
+											<span class="fw-medium d-block"
+												>80%</span
+											>
+										</td>
+										<td>
+											<span class="text-body">CSAT</span>
+											<span class="fw-medium d-block"
+												>85%</span
+											>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-5 col-xxl-6">
+			<div class="card custom-shadow rounded-3 bg-white border mb-4">
+				<div class="custom-padding-30">
+					<div
+						class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3 mb-lg-4"
+					>
+						<h3 class="mb-0 fw-semibold">Call Center Geography</h3>
+
+						<div
+							class="dropdown select-dropdown without-border position-relative"
+							style="right: -5px"
+						>
+							<button
+								class="dropdown-toggle bg-transparent border text-body rounded-2"
+								style="padding-right: 20px"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								Last Year
+							</button>
+
+							<ul
+								class="dropdown-menu dropdown-menu-end bg-white border-0 box-shadow py-3"
+							>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										Today
+									</button>
+								</li>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										Last Week
+									</button>
+								</li>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										Last Month
+									</button>
+								</li>
+								<li>
+									<button
+										class="dropdown-item text-secondary py-2 px-3"
+									>
+										Last Year
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="text-center" style="margin: 40px 0">
+						<div
+							id="call_center_geography"
+							style="height: 187px"
+						></div>
+					</div>
+					<ul class="ps-0 mb-0 list-unstyled sales_by_locations mt-4">
+						<li class="d-flex align-items-center pe-0">
+							<div class="flex-shrink-0">
+								<img
+									src="/assets/images/usa.svg"
+									class="wh-30 rounded-circle"
+									alt="usa"
+								/>
+							</div>
+							<div class="flex-grow-1 ms-3">
+								<div
+									class="d-flex justify-content-between position-relative"
+								>
+									<span class="fw-medium d-block mb-2"
+										>United States</span
+									>
+									<span class="count fw-medium text-body"
+										>90%</span
+									>
+									<span
+										class="position-absolute top-50 start-50 translate-middle pb-2 fw-medium"
+										>1,200 calls</span
+									>
+								</div>
+								<div
+									class="progress"
+									role="progressbar"
+									aria-label="Example with label"
+									aria-valuenow="90"
+									aria-valuemin="0"
+									aria-valuemax="100"
+								>
+									<div
+										class="progress-bar bg-success-60"
+										style="width: 90%"
+									></div>
+								</div>
+							</div>
+						</li>
+						<li class="d-flex align-items-center pe-0">
+							<div class="flex-shrink-0">
+								<img
+									src="/assets/images/canada.svg"
+									class="wh-30 rounded-circle"
+									alt="canada"
+								/>
+							</div>
+							<div class="flex-grow-1 ms-3">
+								<div
+									class="d-flex justify-content-between position-relative"
+								>
+									<span class="fw-medium d-block mb-2"
+										>Canada</span
+									>
+									<span class="count fw-medium text-body"
+										>88%</span
+									>
+									<span
+										class="position-absolute top-50 start-50 translate-middle pb-2 fw-medium"
+										>980 calls</span
+									>
+								</div>
+								<div
+									class="progress"
+									role="progressbar"
+									aria-label="Example with label"
+									aria-valuenow="88"
+									aria-valuemin="0"
+									aria-valuemax="100"
+								>
+									<div
+										class="progress-bar bg-primary"
+										style="width: 88%"
+									></div>
+								</div>
+							</div>
+						</li>
+						<li class="d-flex align-items-center pe-0">
+							<div class="flex-shrink-0">
+								<img
+									src="/assets/images/brazil.svg"
+									class="wh-30 rounded-circle"
+									alt="brazil"
+								/>
+							</div>
+							<div class="flex-grow-1 ms-3">
+								<div
+									class="d-flex justify-content-between position-relative"
+								>
+									<span class="fw-medium d-block mb-2"
+										>Brazil</span
+									>
+									<span class="count fw-medium text-body"
+										>65%</span
+									>
+									<span
+										class="position-absolute top-50 start-50 translate-middle pb-2 fw-medium"
+										>850 calls</span
+									>
+								</div>
+								<div
+									class="progress"
+									role="progressbar"
+									aria-label="Example with label"
+									aria-valuenow="65"
+									aria-valuemin="0"
+									aria-valuemax="100"
+								>
+									<div
+										class="progress-bar bg-danger"
+										style="width: 65%"
+									></div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xxl-4">
+			<div class="card custom-shadow rounded-3 bg-white border mb-4">
+				<div class="custom-padding-30">
+					<div
+						class="d-flex justify-content-between align-items-center gap-1 pb-2 mb-4"
+					>
+						<h3 class="mb-0 fw-semibold">Agent Avg. Earnings</h3>
+
+						<div class="dropdown action-opt">
+							<button
+								class="btn bg-transparent p-0"
+								type="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								<i data-feather="more-vertical"></i>
+							</button>
+							<ul
+								class="dropdown-menu dropdown-menu-end bg-white border box-shadow"
+							>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="clock"></i>
+										Today
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="pie-chart"></i>
+										Last 7 Days
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="rotate-cw"></i>
+										Last Month
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="calendar"></i>
+										Last 1 Year
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="bar-chart"></i>
+										All Time
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="eye"></i>
+										View
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="trash"></i>
+										Delete
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<ul
+						class="nav nav-tabs justify-content-between ethereum-rate-tabs"
+						id="myTab"
+						role="tablist"
+					>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link active fw-normal"
+								style="font-size: 14px"
+								id="ethereum1-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#ethereum1-tab-pane"
+								type="button"
+								role="tab"
+								aria-controls="ethereum1-tab-pane"
+								aria-selected="true"
+							>
+								1d
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link fw-normal"
+								style="font-size: 14px"
+								id="ethereum2-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#ethereum2-tab-pane"
+								type="button"
+								role="tab"
+								aria-controls="ethereum2-tab-pane"
+								aria-selected="false"
+							>
+								15d
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link fw-normal"
+								style="font-size: 14px"
+								id="ethereum3-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#ethereum3-tab-pane"
+								type="button"
+								role="tab"
+								aria-controls="ethereum3-tab-pane"
+								aria-selected="false"
+							>
+								1m
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link fw-normal"
+								style="font-size: 14px"
+								id="ethereum4-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#ethereum4-tab-pane"
+								type="button"
+								role="tab"
+								aria-controls="ethereum4-tab-pane"
+								aria-selected="false"
+							>
+								6m
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link fw-normal"
+								style="font-size: 14px"
+								id="ethereum5-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#ethereum5-tab-pane"
+								type="button"
+								role="tab"
+								aria-controls="ethereum5-tab-pane"
+								aria-selected="false"
+							>
+								1y
+							</button>
+						</li>
+					</ul>
+
+					<div class="tab-content" id="myTabContent">
+						<div
+							class="tab-pane fade show active"
+							id="ethereum1-tab-pane"
+							role="tabpanel"
+							aria-labelledby="ethereum1-tab"
+							tabindex="0"
+						>
+							<div style="margin: -30px -5px 0 -21px">
+								<div id="agent_avg_earnings"></div>
+							</div>
+							<div
+								class="d-flex align-items-center position-relative z-1 justify-content-between"
+							>
+								<div class="d-flex align-items-center">
+									<div class="flex-shrink-0">
+										<div
+											class="bg-body-bg border text-center rounded-2"
+											style="
+												width: 48px;
+												height: 48px;
+												line-height: 48px;
+											"
+										>
+											<img
+												src="/assets/images/agent-avg-earnings.svg"
+												alt="agent-avg-earnings"
+											/>
+										</div>
+									</div>
+									<div class="flex-grow-1 ms-3">
+										<h3
+											class="fs-28 fw-semibold text-secondary mb-0"
+										>
+											$2,534
+										</h3>
+										<span class="text-body d-block"
+											>Last month earning</span
+										>
+									</div>
+								</div>
+
+								<span
+									class="d-flex align-items-center align-items-center text-body"
+								>
+									<i
+										class="material-symbols-outlined fs-18 pe-2 text-success-60"
+										>trending_up</i
+									>
+									<span class="fw-medium me-1 text-secondary"
+										>+8.7%</span
+									>
+								</span>
+							</div>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="ethereum2-tab-pane"
+							role="tabpanel"
+							aria-labelledby="ethereum2-tab"
+							tabindex="0"
+						>
+							<div style="margin: -30px -5px 0 -21px">
+								<div id="agent_avg_earnings2"></div>
+							</div>
+							<div
+								class="d-flex align-items-center position-relative z-1 justify-content-between"
+							>
+								<div class="d-flex align-items-center">
+									<div class="flex-shrink-0">
+										<div
+											class="bg-body-bg border text-center rounded-2"
+											style="
+												width: 48px;
+												height: 48px;
+												line-height: 48px;
+											"
+										>
+											<img
+												src="/assets/images/agent-avg-earnings.svg"
+												alt="agent-avg-earnings"
+											/>
+										</div>
+									</div>
+									<div class="flex-grow-1 ms-3">
+										<h3
+											class="fs-28 fw-semibold text-secondary mb-0"
+										>
+											$3,456
+										</h3>
+										<span class="text-body d-block"
+											>Last month earning</span
+										>
+									</div>
+								</div>
+
+								<span
+									class="d-flex align-items-center align-items-center text-body"
+								>
+									<i
+										class="material-symbols-outlined fs-18 pe-2 text-success"
+										>trending_up</i
+									>
+									<span class="fw-medium me-1 text-secondary"
+										>+8.7%</span
+									>
+								</span>
+							</div>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="ethereum3-tab-pane"
+							role="tabpanel"
+							aria-labelledby="ethereum3-tab"
+							tabindex="0"
+						>
+							<div style="margin: -30px -5px 0 -21px">
+								<div id="agent_avg_earnings3"></div>
+							</div>
+							<div
+								class="d-flex align-items-center position-relative z-1 justify-content-between"
+							>
+								<div class="d-flex align-items-center">
+									<div class="flex-shrink-0">
+										<div
+											class="bg-body-bg border text-center rounded-2"
+											style="
+												width: 48px;
+												height: 48px;
+												line-height: 48px;
+											"
+										>
+											<img
+												src="/assets/images/agent-avg-earnings.svg"
+												alt="agent-avg-earnings"
+											/>
+										</div>
+									</div>
+									<div class="flex-grow-1 ms-3">
+										<h3
+											class="fs-28 fw-semibold text-secondary mb-0"
+										>
+											$1,753
+										</h3>
+										<span class="text-body d-block"
+											>Last month earning</span
+										>
+									</div>
+								</div>
+
+								<span
+									class="d-flex align-items-center align-items-center text-body"
+								>
+									<i
+										class="material-symbols-outlined fs-18 pe-2 text-success"
+										>trending_up</i
+									>
+									<span class="fw-medium me-1 text-secondary"
+										>+4.7%</span
+									>
+								</span>
+							</div>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="ethereum4-tab-pane"
+							role="tabpanel"
+							aria-labelledby="ethereum4-tab"
+							tabindex="0"
+						>
+							<div style="margin: -30px -5px 0 -21px">
+								<div id="agent_avg_earnings4"></div>
+							</div>
+							<div
+								class="d-flex align-items-center position-relative z-1 justify-content-between"
+							>
+								<div class="d-flex align-items-center">
+									<div class="flex-shrink-0">
+										<div
+											class="bg-body-bg border text-center rounded-2"
+											style="
+												width: 48px;
+												height: 48px;
+												line-height: 48px;
+											"
+										>
+											<img
+												src="/assets/images/agent-avg-earnings.svg"
+												alt="agent-avg-earnings"
+											/>
+										</div>
+									</div>
+									<div class="flex-grow-1 ms-3">
+										<h3
+											class="fs-28 fw-semibold text-secondary mb-0"
+										>
+											$6,753
+										</h3>
+										<span class="text-body d-block"
+											>Last month earning</span
+										>
+									</div>
+								</div>
+
+								<span
+									class="d-flex align-items-center align-items-center text-body"
+								>
+									<i
+										class="material-symbols-outlined fs-18 pe-2 text-success"
+										>trending_up</i
+									>
+									<span class="fw-medium me-1 text-secondary"
+										>+6.7%</span
+									>
+								</span>
+							</div>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="ethereum5-tab-pane"
+							role="tabpanel"
+							aria-labelledby="ethereum5-tab"
+							tabindex="0"
+						>
+							<div style="margin: -30px -5px 0 -21px">
+								<div id="agent_avg_earnings5"></div>
+							</div>
+							<div
+								class="d-flex align-items-center position-relative z-1 justify-content-between"
+							>
+								<div class="d-flex align-items-center">
+									<div class="flex-shrink-0">
+										<div
+											class="bg-body-bg border text-center rounded-2"
+											style="
+												width: 48px;
+												height: 48px;
+												line-height: 48px;
+											"
+										>
+											<img
+												src="/assets/images/agent-avg-earnings.svg"
+												alt="agent-avg-earnings"
+											/>
+										</div>
+									</div>
+									<div class="flex-grow-1 ms-3">
+										<h3
+											class="fs-28 fw-semibold text-secondary mb-0"
+										>
+											$5,325
+										</h3>
+										<span class="text-body d-block"
+											>Last month earning</span
+										>
+									</div>
+								</div>
+
+								<span
+									class="d-flex align-items-center align-items-center text-body"
+								>
+									<i
+										class="material-symbols-outlined fs-18 pe-2 text-success"
+										>trending_up</i
+									>
+									<span class="fw-medium me-1 text-secondary"
+										>+3.7%</span
+									>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xxl-8">
+			<div class="card custom-shadow rounded-3 bg-white border mb-4">
+				<div
+					class="d-flex justify-content-between align-items-center flex-wrap gap-3 custom-padding-30 border-bottom pb-4 custom-padding-30"
+				>
+					<h3 class="mb-0 fw-semibold">Recent Calls</h3>
+					<div class="d-flex align-items-center">
+						<form class="position-relative table-src-form">
+							<input
+								type="text"
+								class="form-control border-0"
+								id="SearchControl"
+								style="width: 265px"
+								placeholder="Search for a name...."
+							/>
+							<i
+								class="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y"
+								>search</i
+							>
+						</form>
+						<div class="dropdown action-opt">
+							<button
+								class="btn bg-transparent p-0"
+								type="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								<i data-feather="more-vertical"></i>
+							</button>
+							<ul
+								class="dropdown-menu dropdown-menu-end bg-white border box-shadow"
+							>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="clock"></i>
+										Today
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="pie-chart"></i>
+										Last 7 Days
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="rotate-cw"></i>
+										Last Month
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="calendar"></i>
+										Last 1 Year
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="bar-chart"></i>
+										All Time
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="eye"></i>
+										View
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="trash"></i>
+										Delete
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="default-table-area style-three recent-calls for-data-table"
+				>
+					<div class="table-responsive">
+						<table class="table align-middle border-0" id="myTable">
+							<thead class="border-bottom">
+								<tr>
+									<th scope="col" class="bg-transparent">
+										Caller Name
+									</th>
+									<th scope="col" class="bg-transparent">
+										Call Type
+									</th>
+									<th scope="col" class="bg-transparent">
+										Duration
+									</th>
+									<th scope="col" class="bg-transparent">
+										Status
+									</th>
+									<th scope="col" class="bg-transparent">
+										Time
+									</th>
+									<th scope="col" class="bg-transparent">
+										CSAT
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="d-flex align-items-center">
+											<div class="flex-shrink-0">
+												<img
+													src="/assets/images/user-166.png"
+													class="rounded-circle"
+													alt="user"
+												/>
+											</div>
+											<div class="flex-grow-1 ms-2">
+												<h4
+													class="fs-14 fw-medium mb-0"
+												>
+													Emily Johnson
+												</h4>
+												<span class="fs-12 text-body"
+													>+1 555-123-4567</span
+												>
+											</div>
+										</div>
+									</td>
+									<td>
+										<span class="text-primary fw-medium"
+											>Inbound</span
+										>
+									</td>
+									<td>
+										<span class="fw-medium">5 mins</span>
+									</td>
+									<td>
+										<span class="text-success-50 fw-medium"
+											>Resolved</span
+										>
+									</td>
+									<td>
+										<span class="fw-medium">10:30 AM</span>
+									</td>
+									<td>
+										<span class="text-success-50 fw-medium"
+											>90%</span
+										>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="d-flex align-items-center">
+											<div class="flex-shrink-0">
+												<img
+													src="/assets/images/user-167.png"
+													class="rounded-circle"
+													alt="user"
+												/>
+											</div>
+											<div class="flex-grow-1 ms-2">
+												<h4
+													class="fs-14 fw-medium mb-0"
+												>
+													Sarah Green
+												</h4>
+												<span class="fs-12 text-body"
+													>+44 20 7946 0958</span
+												>
+											</div>
+										</div>
+									</td>
+									<td>
+										<span class="text-danger-50 fw-medium"
+											>Outbound</span
+										>
+									</td>
+									<td>
+										<span class="fw-medium">3 mins</span>
+									</td>
+									<td>
+										<span class="text-danger-50 fw-medium"
+											>Pending</span
+										>
+									</td>
+									<td>
+										<span class="fw-medium">10:35 AM</span>
+									</td>
+									<td>
+										<span
+											class="text-primary-div-50 fw-medium"
+											>85%</span
+										>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="d-flex align-items-center">
+											<div class="flex-shrink-0">
+												<img
+													src="/assets/images/user-168.png"
+													class="rounded-circle"
+													alt="user"
+												/>
+											</div>
+											<div class="flex-grow-1 ms-2">
+												<h4
+													class="fs-14 fw-medium mb-0"
+												>
+													Adam Smith
+												</h4>
+												<span class="fs-12 text-body"
+													>+1 555-234-5678</span
+												>
+											</div>
+										</div>
+									</td>
+									<td>
+										<span class="text-primary fw-medium"
+											>Inbound</span
+										>
+									</td>
+									<td>
+										<span class="fw-medium">7 mins</span>
+									</td>
+									<td>
+										<span class="text-success-50 fw-medium"
+											>Resolved</span
+										>
+									</td>
+									<td>
+										<span class="fw-medium">10:40 AM</span>
+									</td>
+									<td>
+										<span class="text-danger-50 fw-medium"
+											>83%</span
+										>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="d-flex align-items-center">
+											<div class="flex-shrink-0">
+												<img
+													src="/assets/images/user-169.png"
+													class="rounded-circle"
+													alt="user"
+												/>
+											</div>
+											<div class="flex-grow-1 ms-2">
+												<h4
+													class="fs-14 fw-medium mb-0"
+												>
+													Laura Martin
+												</h4>
+												<span class="fs-12 text-body"
+													>+61 2 1234 5678</span
+												>
+											</div>
+										</div>
+									</td>
+									<td>
+										<span class="text-primary fw-medium"
+											>Inbound</span
+										>
+									</td>
+									<td>
+										<span class="fw-medium">4 mins</span>
+									</td>
+									<td>
+										<span
+											class="text-primary-div-50 fw-medium"
+											>Dropped</span
+										>
+									</td>
+									<td>
+										<span class="fw-medium">10:45 AM</span>
+									</td>
+									<td>
+										<span
+											class="text-primary-div-50 fw-medium"
+											>87%</span
+										>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ template "dashboard_bottom" . }}

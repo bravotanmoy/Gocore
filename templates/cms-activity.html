@@ -1,0 +1,84 @@
+{{ template "dashboard_top" . }}
+
+<div class="main-content-container overflow-hidden">
+	<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+		<h3 class="mb-0">Application Activity Log</h3>
+		<span class="text-body fs-14">{{ .total }} entries</span>
+	</div>
+
+	{{ if .flash }}<div class="alert alert-info">{{ .flash }}</div>{{ end }}
+
+	<div class="card bg-white border-0 rounded-3 mb-4">
+		<div class="card-body p-0">
+			<div class="p-4">
+				<form class="row g-2" method="get" action="/dashboard/cms/activity">
+					<div class="col-md-3">
+						<input type="text" name="search" value="{{ .search }}" class="form-control" placeholder="Search detail / path" />
+					</div>
+					<div class="col-md-3">
+						<select name="action" class="form-select form-control">
+							<option value="">All actions</option>
+							<option value="login" {{ if eq .action "login" }}selected{{ end }}>login</option>
+							<option value="create" {{ if eq .action "create" }}selected{{ end }}>create</option>
+							<option value="update" {{ if eq .action "update" }}selected{{ end }}>update</option>
+							<option value="delete" {{ if eq .action "delete" }}selected{{ end }}>delete</option>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<input type="text" name="entity" value="{{ .entity }}" class="form-control" placeholder="Entity (user, post, order...)" />
+					</div>
+					<div class="col-md-3">
+						<button type="submit" class="btn btn-primary w-100">Filter</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="default-table-area style-two default-table-width">
+				<div class="table-responsive">
+					<table class="table align-middle">
+						<thead>
+							<tr>
+								<th scope="col">ID</th>
+								<th scope="col">User</th>
+								<th scope="col">Action</th>
+								<th scope="col">Entity</th>
+								<th scope="col">Detail</th>
+								<th scope="col">IP</th>
+								<th scope="col">Path</th>
+								<th scope="col">When</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{ range .logs }}
+							<tr>
+								<td class="text-body">#{{ .ID }}</td>
+								<td>{{ if .User }}{{ .User.Name }}{{ else }}—{{ end }}</td>
+								<td>
+									<span class="badge bg-opacity-10 {{ if eq .Action "delete" }}bg-danger text-danger{{ else if eq .Action "create" }}bg-success text-success{{ else if eq .Action "login" }}bg-info text-info{{ else }}bg-primary text-primary{{ end }}">{{ .Action }}</span>
+								</td>
+								<td class="text-body">{{ .Entity }}{{ if .EntityID }} #{{ .EntityID }}{{ end }}</td>
+								<td class="text-body">{{ .Detail }}</td>
+								<td class="text-body fs-13">{{ .IP }}</td>
+								<td class="text-body fs-13">{{ .Method }} {{ .Path }}</td>
+								<td class="text-body fs-13">{{ fdate .CreatedAt }}</td>
+							</tr>
+							{{ else }}
+							<tr><td colspan="8" class="text-center text-body py-4">No activity recorded yet</td></tr>
+							{{ end }}
+						</tbody>
+					</table>
+				</div>
+
+				<div class="p-4 d-flex justify-content-between align-items-center">
+					<span class="fs-13 text-body">Page {{ .page }}</span>
+					<div class="d-flex gap-2">
+						{{ if .hasPrev }}<a class="btn btn-outline-secondary btn-sm" href="/dashboard/cms/activity?page={{ .prevPage }}&search={{ .search }}&action={{ .action }}&entity={{ .entity }}">Previous</a>{{ end }}
+						{{ if .hasNext }}<a class="btn btn-outline-secondary btn-sm" href="/dashboard/cms/activity?page={{ .nextPage }}&search={{ .search }}&action={{ .action }}&entity={{ .entity }}">Next</a>{{ end }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ template "dashboard_bottom" . }}

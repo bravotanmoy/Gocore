@@ -1,0 +1,2471 @@
+{{ template "dashboard_top" . }}
+
+<div class="main-content-container overflow-hidden">
+	<div class="row">
+		<div class="col-sm-6 col-xxl-3">
+			<div class="card bg-white border-0 rounded-3 mb-4">
+				<div class="card-body p-4">
+					<div class="d-flex">
+						<div class="flex-grow-1 me-3">
+							<span class="d-block mb-1">Ad Spend</span>
+							<h2 class="text-secondary fs-32">$1,528</h2>
+							<span
+								class="d-inline-block bg-success bg-opacity-10 border-success border px-2 rounded-pill text-success mb-1 fs-12 fw-medium"
+								>+5.4%</span
+							>
+							<p class="fs-12">vs previous 30 days</p>
+						</div>
+						<div class="flex-shrink-0">
+							<img
+								src="/assets/images/ads.gif"
+								style="width: 60px"
+								alt="ads"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-xxl-3">
+			<div class="card bg-white border-0 rounded-3 mb-4">
+				<div class="card-body p-4">
+					<div class="d-flex">
+						<div class="flex-grow-1 me-3">
+							<span class="d-block mb-1">Cost Per Thousand</span>
+							<h2 class="text-secondary fs-32">$3.95</h2>
+							<span
+								class="d-inline-block bg-danger bg-opacity-10 border-danger border px-2 rounded-pill text-danger mb-1 fs-12 fw-medium"
+								>-1.4%</span
+							>
+							<p class="fs-12">vs previous 30 days</p>
+						</div>
+						<div class="flex-shrink-0">
+							<img
+								src="/assets/images/video-advertising.gif"
+								style="width: 60px"
+								alt="video-advertising"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-xxl-3">
+			<div class="card bg-white border-0 rounded-3 mb-4">
+				<div class="card-body p-4">
+					<div class="d-flex">
+						<div class="flex-grow-1 me-3">
+							<span class="d-block mb-1">Cost Per Click</span>
+							<h2 class="text-secondary fs-32">$0.15</h2>
+							<span
+								class="d-inline-block bg-danger bg-opacity-10 border-danger border px-2 rounded-pill text-danger mb-1 fs-12 fw-medium"
+								>-0.04%</span
+							>
+							<p class="fs-12">vs previous 30 days</p>
+						</div>
+						<div class="flex-shrink-0">
+							<img
+								src="/assets/images/call-to-action.gif"
+								style="width: 60px"
+								alt="call-to-action"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-xxl-3">
+			<div class="card bg-white border-0 rounded-3 mb-4">
+				<div class="card-body p-4">
+					<div class="d-flex">
+						<div class="flex-grow-1 me-3">
+							<span class="d-block mb-1">Click Through Rate</span>
+							<h2 class="text-secondary fs-32">$2.95</h2>
+							<span
+								class="d-inline-block bg-success bg-opacity-10 border-success border px-2 rounded-pill text-success mb-1 fs-12 fw-medium"
+								>+7%</span
+							>
+							<p class="fs-12">vs previous 30 days</p>
+						</div>
+						<div class="flex-shrink-0">
+							<img
+								src="/assets/images/banner.gif"
+								style="width: 60px"
+								alt="banner"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="card bg-white border-0 rounded-3 mb-4">
+				<div class="card-body p-4">
+					<div
+						class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3 mb-lg-30"
+					>
+						<h3 class="mb-0">Performance Overview</h3>
+						<select
+							class="form-select month-select form-control w-135 bg-border-color border-color"
+							aria-label="Default select example"
+						>
+							<option selected>Last Week</option>
+							<option value="1">Last 60 Days</option>
+							<option value="2">Last 90 Days</option>
+						</select>
+					</div>
+					<div style="margin: -25px -10px -17px -17px">
+						<div id="performance_overview"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div
+				class="border-0 rounded-3 mb-4 text-center"
+				style="
+					background: linear-gradient(
+						150deg,
+						#827cd8 0.57%,
+						#2d2761 95.93%
+					);
+				"
+			>
+				<div class="card-body p-4 text-center">
+					<span class="fs-24 d-block text-white"
+						>Have You Tried Our</span
+					>
+					<h3 class="fs-24 text-white">New Mobile App?</h3>
+					<div class="py-4 mb-3">
+						<img src="/assets/images/app.png" alt="app" />
+					</div>
+					<a
+						href="#"
+						class="d-inline-block py-2 px-3 btn btn-primary"
+					>
+						Download Mobile App
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<div
+				class="border-0 rounded-3 mb-4 for-dark"
+				style="background-color: #ebdcd5"
+			>
+				<div class="card-body p-4">
+					<div
+						class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3 mb-lg-30"
+					>
+						<h3 class="mb-0">Highlights</h3>
+						<span class="fs-12" style="color: #82716f"
+							>Last 7 days</span
+						>
+					</div>
+					<ul class="ps-0 mb-0 list-unstyled">
+						<li
+							class="d-flex justify-content-between border-bottom pb-3 mb-3"
+							style="border-color: #e3d1c9 !important"
+						>
+							<div class="d-flex align-items-center">
+								<i
+									class="ri-star-fill fs-17"
+									style="color: #fd5812"
+								></i>
+								<span class="ms-2" style="color: #82716f"
+									>Average Client Rating</span
+								>
+							</div>
+							<span style="color: #463938"
+								><i
+									class="ri-arrow-up-line text-success fs-16"
+								></i>
+								4.9/5.0</span
+							>
+						</li>
+						<li
+							class="d-flex justify-content-between border-bottom pb-3 mb-3"
+							style="border-color: #e3d1c9 !important"
+						>
+							<div class="d-flex align-items-center">
+								<i
+									class="ri-instagram-fill fs-17"
+									style="color: #fd5812"
+								></i>
+								<span class="ms-2" style="color: #82716f"
+									>Instagram Followers</span
+								>
+							</div>
+							<span style="color: #463938"
+								><i
+									class="ri-arrow-down-line text-danger fs-16"
+								></i>
+								630K</span
+							>
+						</li>
+						<li
+							class="d-flex justify-content-between border-bottom pb-3 mb-3"
+							style="border-color: #e3d1c9 !important"
+						>
+							<div class="d-flex align-items-center">
+								<i
+									class="ri-facebook-fill fs-17"
+									style="color: #fd5812"
+								></i>
+								<span class="ms-2" style="color: #82716f"
+									>Facebook Followers</span
+								>
+							</div>
+							<span style="color: #463938"
+								><i
+									class="ri-arrow-up-line text-success fs-16"
+								></i>
+								630K</span
+							>
+						</li>
+						<li class="d-flex justify-content-between">
+							<div class="d-flex align-items-center">
+								<i
+									class="ri-google-fill fs-17"
+									style="color: #fd5812"
+								></i>
+								<span class="ms-2" style="color: #82716f"
+									>Google Ads CPC</span
+								>
+							</div>
+							<span style="color: #463938"
+								><i
+									class="ri-arrow-up-line text-success fs-16"
+								></i>
+								$3.58</span
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="card bg-white border-0 rounded-3 mb-4">
+				<div class="card-body p-4">
+					<div class="mb-3 mb-lg-30">
+						<h3 class="mb-0">Channels</h3>
+					</div>
+					<ul class="ps-0 mb-0 list-unstyled">
+						<li class="mb-3 pb-3 border-bottom">
+							<div
+								class="d-flex align-items-center justify-content-between"
+							>
+								<div class="flex-shrink-0">
+									<div class="d-flex">
+										<img
+											src="/assets/images/facebook.svg"
+											style="width: 31px"
+											alt="facebook"
+										/>
+										<div class="ms-3">
+											<h4
+												class="mb-0 fs-14 fw-semibold lh-1"
+											>
+												Facebook
+											</h4>
+											<span class="fs-12">Community</span>
+										</div>
+									</div>
+								</div>
+								<div class="flex-grow-1 ms-3">
+									<div
+										class="d-flex align-items-center justify-content-end"
+									>
+										<div
+											class="progress-responsive"
+											style="width: 120px"
+										>
+											<div
+												class="progress rounded-pill"
+												style="
+													height: 8px;
+													background-color: #dde4ff;
+												"
+												role="progressbar"
+												aria-label="Example with label"
+												aria-valuenow="50"
+												aria-valuemin="0"
+												aria-valuemax="100"
+											>
+												<div
+													class="progress-bar rounded-pill"
+													style="
+														width: 50%;
+														height: 8px;
+														background-color: #757dff;
+													"
+												></div>
+											</div>
+										</div>
+										<span class="count text-body ms-3 fs-12"
+											>50%</span
+										>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mb-3 pb-3 border-bottom">
+							<div
+								class="d-flex align-items-center justify-content-between"
+							>
+								<div class="flex-shrink-0">
+									<div class="d-flex">
+										<img
+											src="/assets/images/dribbble.svg"
+											style="width: 31px"
+											alt="dribbble"
+										/>
+										<div class="ms-3">
+											<h4
+												class="mb-0 fs-14 fw-semibold lh-1"
+											>
+												Dribbble
+											</h4>
+											<span class="fs-12">Community</span>
+										</div>
+									</div>
+								</div>
+								<div class="flex-grow-1 ms-3">
+									<div
+										class="d-flex align-items-center justify-content-end"
+									>
+										<div
+											class="progress-responsive"
+											style="width: 120px"
+										>
+											<div
+												class="progress rounded-pill"
+												style="
+													height: 8px;
+													background-color: #daebff;
+												"
+												role="progressbar"
+												aria-label="Example with label"
+												aria-valuenow="75"
+												aria-valuemin="0"
+												aria-valuemax="100"
+											>
+												<div
+													class="progress-bar rounded-pill"
+													style="
+														width: 75%;
+														height: 8px;
+														background-color: #5da8ff;
+													"
+												></div>
+											</div>
+										</div>
+										<span class="count text-body ms-3 fs-12"
+											>75%</span
+										>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mb-3 pb-3 border-bottom">
+							<div
+								class="d-flex align-items-center justify-content-between"
+							>
+								<div class="flex-shrink-0">
+									<div class="d-flex">
+										<img
+											src="/assets/images/instagram.svg"
+											style="width: 31px"
+											alt="instagram"
+										/>
+										<div class="ms-3">
+											<h4
+												class="mb-0 fs-14 fw-semibold lh-1"
+											>
+												Instagram
+											</h4>
+											<span class="fs-12">Reel</span>
+										</div>
+									</div>
+								</div>
+								<div class="flex-grow-1 ms-3">
+									<div
+										class="d-flex align-items-center justify-content-end"
+									>
+										<div
+											class="progress-responsive"
+											style="width: 120px"
+										>
+											<div
+												class="progress rounded-pill"
+												style="
+													height: 8px;
+													background-color: #ffe8d4;
+												"
+												role="progressbar"
+												aria-label="Example with label"
+												aria-valuenow="30"
+												aria-valuemin="0"
+												aria-valuemax="100"
+											>
+												<div
+													class="progress-bar rounded-pill"
+													style="
+														width: 30%;
+														height: 8px;
+														background-color: #fe7a36;
+													"
+												></div>
+											</div>
+										</div>
+										<span class="count text-body ms-3 fs-12"
+											>30%</span
+										>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mb-3 pb-3 border-bottom">
+							<div
+								class="d-flex align-items-center justify-content-between"
+							>
+								<div class="flex-shrink-0">
+									<div class="d-flex">
+										<img
+											src="/assets/images/behance.svg"
+											style="width: 31px"
+											alt="behance"
+										/>
+										<div class="ms-3">
+											<h4
+												class="mb-0 fs-14 fw-semibold lh-1"
+											>
+												Behance
+											</h4>
+											<span class="fs-12">Community</span>
+										</div>
+									</div>
+								</div>
+								<div class="flex-grow-1 ms-3">
+									<div
+										class="d-flex align-items-center justify-content-end"
+									>
+										<div
+											class="progress-responsive"
+											style="width: 120px"
+										>
+											<div
+												class="progress rounded-pill"
+												style="
+													height: 8px;
+													background-color: #f3e8ff;
+												"
+												role="progressbar"
+												aria-label="Example with label"
+												aria-valuenow="80"
+												aria-valuemin="0"
+												aria-valuemax="100"
+											>
+												<div
+													class="progress-bar rounded-pill"
+													style="
+														width: 80%;
+														height: 8px;
+														background-color: #bf85fb;
+													"
+												></div>
+											</div>
+										</div>
+										<span class="count text-body ms-3 fs-12"
+											>80%</span
+										>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mb-3 pb-3 border-bottom">
+							<div
+								class="d-flex align-items-center justify-content-between"
+							>
+								<div class="flex-shrink-0">
+									<div class="d-flex">
+										<img
+											src="/assets/images/figma.svg"
+											style="width: 31px"
+											alt="figma"
+										/>
+										<div class="ms-3">
+											<h4
+												class="mb-0 fs-14 fw-semibold lh-1"
+											>
+												Figma
+											</h4>
+											<span class="fs-12">Community</span>
+										</div>
+									</div>
+								</div>
+								<div class="flex-grow-1 ms-3">
+									<div
+										class="d-flex align-items-center justify-content-end"
+									>
+										<div
+											class="progress-responsive"
+											style="width: 120px"
+										>
+											<div
+												class="progress rounded-pill"
+												style="
+													height: 8px;
+													background-color: #daebff;
+												"
+												role="progressbar"
+												aria-label="Example with label"
+												aria-valuenow="50"
+												aria-valuemin="0"
+												aria-valuemax="100"
+											>
+												<div
+													class="progress-bar rounded-pill"
+													style="
+														width: 50%;
+														height: 8px;
+														background-color: #5da8ff;
+													"
+												></div>
+											</div>
+										</div>
+										<span class="count text-body ms-3 fs-12"
+											>50%</span
+										>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div
+								class="d-flex align-items-center justify-content-between"
+							>
+								<div class="flex-shrink-0">
+									<div class="d-flex">
+										<img
+											src="/assets/images/google2.svg"
+											style="width: 31px"
+											alt="google"
+										/>
+										<div class="ms-3">
+											<h4
+												class="mb-0 fs-14 fw-semibold lh-1"
+											>
+												Google
+											</h4>
+											<span class="fs-12">SEO & PPC</span>
+										</div>
+									</div>
+								</div>
+								<div class="flex-grow-1 ms-3">
+									<div
+										class="d-flex align-items-center justify-content-end"
+									>
+										<div
+											class="progress-responsive"
+											style="width: 120px"
+										>
+											<div
+												class="progress rounded-pill"
+												style="
+													height: 8px;
+													background-color: #d8ffc8;
+												"
+												role="progressbar"
+												aria-label="Example with label"
+												aria-valuenow="20"
+												aria-valuemin="0"
+												aria-valuemax="100"
+											>
+												<div
+													class="progress-bar rounded-pill"
+													style="
+														width: 20%;
+														height: 8px;
+														background-color: #58f229;
+													"
+												></div>
+											</div>
+										</div>
+										<span class="count text-body ms-3 fs-12"
+											>20%</span
+										>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-8">
+			<div class="card bg-white border-0 rounded-3 mb-4">
+				<div class="card-body p-4">
+					<div
+						class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3"
+					>
+						<h3 class="mb-0">Campaigns</h3>
+						<button
+							class="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
+							data-bs-toggle="modal"
+							data-bs-target="#exampleModal"
+						>
+							<span class="py-sm-1 d-block">
+								<i
+									class="ri-add-line d-none d-sm-inline-block"
+								></i>
+								<span>Add Campaigns</span>
+							</span>
+						</button>
+					</div>
+
+					<style>
+						.nav-tabs .nav-item .nav-link.active {
+							color: #4936f5 !important;
+						}
+					</style>
+
+					<ul
+						class="nav nav-tabs bg-transparent border-bottom gap-2 gap-sm-5 pb-4"
+						id="myTab"
+						role="tablist"
+					>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link p-0 bg-transparent border-0 fs-12 fw-medium text-body active"
+								id="all-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#all-tab-pane"
+								type="button"
+								role="tab"
+								aria-controls="all-tab-pane"
+								aria-selected="true"
+							>
+								ALL (05)
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link p-0 bg-transparent border-0 fs-12 fw-medium text-body"
+								id="pending-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#pending-tab-pane"
+								type="button"
+								role="tab"
+								aria-controls="pending-tab-pane"
+								aria-selected="false"
+							>
+								PENDING(05)
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link p-0 bg-transparent border-0 fs-12 fw-medium text-body"
+								id="completed-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#completed-tab-pane"
+								type="button"
+								role="tab"
+								aria-controls="completed-tab-pane"
+								aria-selected="false"
+							>
+								COMPLETED(07)
+							</button>
+						</li>
+					</ul>
+
+					<div class="tab-content" id="myTabContent">
+						<div
+							class="tab-pane fade show active"
+							id="all-tab-pane"
+							role="tabpanel"
+							aria-labelledby="all-tab"
+							tabindex="0"
+						>
+							<div
+								class="default-table-area style-two campaigns-table"
+							>
+								<div class="table-responsive">
+									<table class="table align-middle border-0">
+										<tbody>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-danger ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															Christmas Eve
+														</h4>
+														<span class="fs-12"
+															>From 10 Oct - 15
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/instagram2.svg"
+															alt="instagram"
+														/>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/linkedin2.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-danger bg-opacity-10 rounded-2 text-danger"
+														>Live Now</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-16.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-17.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-18.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-19.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="users-list"
+																class="wh-34 lh-34 rounded-circle d-block text-center text-decoration-none text-white fs-12 fw-medium border border-1 border-color-white"
+																style="
+																	background-color: #3a4252;
+																"
+																>+3</a
+															>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-danger ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															Teacher’s Day
+														</h4>
+														<span class="fs-12"
+															>From 08 Oct - 12
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/instagram2.svg"
+															alt="instagram"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-success bg-opacity-10 rounded-2 text-success"
+														>Reviewing</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-25.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-26.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-27.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-primary ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															ThanksGiving
+														</h4>
+														<span class="fs-12"
+															>From 01 Oct - 05
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/linkedin2.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-primary bg-opacity-10 rounded-2 text-primary"
+														>Paused</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-25.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-28.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-primary-div ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															Team Gateway
+														</h4>
+														<span class="fs-12"
+															>From 05 Oct - 17
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-danger bg-opacity-10 rounded-2 text-danger"
+														>Live Now</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-30.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-31.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-32.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-success ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1 text-secondary"
+														>
+															Halloween
+														</h4>
+														<span class="fs-12"
+															>From 20 Oct - 31
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/instagram2.svg"
+															alt="instagram"
+														/>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/linkedin2.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-success bg-opacity-10 rounded-2 text-success"
+														>Reviewing</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-16.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-17.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-18.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="pending-tab-pane"
+							role="tabpanel"
+							aria-labelledby="pending-tab"
+							tabindex="0"
+						>
+							<div
+								class="default-table-area style-two campaigns-table"
+							>
+								<div class="table-responsive">
+									<table class="table align-middle border-0">
+										<tbody>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-primary ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															ThanksGiving
+														</h4>
+														<span class="fs-12"
+															>From 01 Oct - 05
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/linkedin2.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-success bg-opacity-10 rounded-2 text-success"
+														>Reviewing</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-25.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-28.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-primary-div ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															Team Gateway
+														</h4>
+														<span class="fs-12"
+															>From 05 Oct - 17
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-success bg-opacity-10 rounded-2 text-success"
+														>Reviewing</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-30.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-31.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-32.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-success ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1 text-secondary"
+														>
+															Halloween
+														</h4>
+														<span class="fs-12"
+															>From 20 Oct - 31
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/instagram2.svg"
+															alt="instagram"
+														/>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/linkedin2.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-success bg-opacity-10 rounded-2 text-success"
+														>Reviewing</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-16.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-17.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-18.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-danger ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															Christmas Eve
+														</h4>
+														<span class="fs-12"
+															>From 10 Oct - 15
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/instagram2.svg"
+															alt="instagram"
+														/>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/linkedin2.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-success bg-opacity-10 rounded-2 text-success"
+														>Reviewing</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-16.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-17.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-18.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-19.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="users-list"
+																class="wh-34 lh-34 rounded-circle d-block text-center text-decoration-none text-white fs-12 fw-medium border border-1 border-color-white"
+																style="
+																	background-color: #3a4252;
+																"
+																>+3</a
+															>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-danger ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															Teacher’s Day
+														</h4>
+														<span class="fs-12"
+															>From 08 Oct - 12
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/instagram2.svg"
+															alt="instagram"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-success bg-opacity-10 rounded-2 text-success"
+														>Reviewing</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-25.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-26.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-27.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div
+							class="tab-pane fade"
+							id="completed-tab-pane"
+							role="tabpanel"
+							aria-labelledby="completed-tab"
+							tabindex="0"
+						>
+							<div
+								class="default-table-area style-two campaigns-table"
+							>
+								<div class="table-responsive">
+									<table class="table align-middle border-0">
+										<tbody>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-danger ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															Christmas Eve
+														</h4>
+														<span class="fs-12"
+															>From 10 Oct - 15
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/instagram2.svg"
+															alt="instagram"
+														/>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/linkedin2.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-danger bg-opacity-10 rounded-2 text-danger"
+														>Live Now</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-16.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-17.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-18.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-19.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="users-list"
+																class="wh-34 lh-34 rounded-circle d-block text-center text-decoration-none text-white fs-12 fw-medium border border-1 border-color-white"
+																style="
+																	background-color: #3a4252;
+																"
+																>+3</a
+															>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-danger ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															Teacher’s Day
+														</h4>
+														<span class="fs-12"
+															>From 08 Oct - 12
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/instagram2.svg"
+															alt="instagram"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-danger bg-opacity-10 rounded-2 text-danger"
+														>Live Now</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-25.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-26.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-27.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-primary ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															ThanksGiving
+														</h4>
+														<span class="fs-12"
+															>From 01 Oct - 05
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/linkedin2.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-danger bg-opacity-10 rounded-2 text-danger"
+														>Live Now</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-25.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-28.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-primary-div ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1"
+														>
+															Team Gateway
+														</h4>
+														<span class="fs-12"
+															>From 05 Oct - 17
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-danger bg-opacity-10 rounded-2 text-danger"
+														>Live Now</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-30.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-31.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-32.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div
+														class="border-start border-2 border-success ps-3 py-2"
+													>
+														<h4
+															class="fs-14 fw-semibold mb-1 text-secondary"
+														>
+															Halloween
+														</h4>
+														<span class="fs-12"
+															>From 20 Oct - 31
+															Oct, 24</span
+														>
+													</div>
+												</td>
+												<td>
+													<div
+														class="d-flex gap-3 gap-xl-2 gap-xxl-3 flex-wrap"
+													>
+														<img
+															src="/assets/images/facebook4.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/instagram2.svg"
+															alt="instagram"
+														/>
+														<img
+															src="/assets/images/google3.svg"
+															alt="facebook"
+														/>
+														<img
+															src="/assets/images/linkedin2.svg"
+															alt="facebook"
+														/>
+													</div>
+												</td>
+												<td>
+													<span
+														class="d-inline-block py-1 px-2 bg-danger bg-opacity-10 rounded-2 text-danger"
+														>Live Now</span
+													>
+												</td>
+												<td>
+													<ul
+														class="ps-0 mb-0 list-unstyled d-flex align-items-center"
+													>
+														<li>
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-16.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-17.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+														<li class="ms-m-15">
+															<a
+																href="my-profile"
+															>
+																<img
+																	src="/assets/images/user-18.jpg"
+																	class="wh-34 lh-34 rounded-circle border border-1 border-color-white"
+																	alt="user"
+																/>
+															</a>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<a
+														href="nft-details"
+														class="rounded-circle d-inline-block text-center fs-18 hover-bg for-dark-read"
+														style="
+															background-color: #eceef2;
+															width: 30px;
+															height: 30px;
+															line-height: 30px;
+														"
+													>
+														<i
+															class="ri-arrow-right-line"
+														></i>
+													</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="card bg-white border-0 rounded-3 mb-4">
+						<div class="card-body p-4">
+							<div class="mb-4">
+								<h3 style="margin-bottom: -2px">
+									External Links
+								</h3>
+							</div>
+
+							<ul class="ps-0 mb-0 list-unstyled">
+								<li
+									class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
+								>
+									<div
+										class="d-flex justify-content-between align-items-center"
+									>
+										<img
+											src="/assets/images/google3.svg"
+											style="width: 18px"
+											alt="google3"
+										/>
+										<span
+											class="text-primary fw-medium ms-2"
+											>Google Ad Analytics</span
+										>
+									</div>
+									<a
+										href="marketing"
+										class="text-decoration-none"
+									>
+										<i
+											class="ri-external-link-line fs-20"
+										></i>
+									</a>
+								</li>
+								<li
+									class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
+								>
+									<div
+										class="d-flex justify-content-between align-items-center"
+									>
+										<img
+											src="/assets/images/instagram2.svg"
+											style="width: 18px"
+											alt="google3"
+										/>
+										<span
+											class="text-primary fw-medium ms-2"
+											>Instagram Ads</span
+										>
+									</div>
+									<a
+										href="marketing"
+										class="text-decoration-none"
+									>
+										<i
+											class="ri-external-link-line fs-20"
+										></i>
+									</a>
+								</li>
+								<li
+									class="d-flex justify-content-between align-items-center"
+								>
+									<div
+										class="d-flex justify-content-between align-items-center"
+									>
+										<img
+											src="/assets/images/facebook4.svg"
+											style="width: 18px"
+											alt="google3"
+										/>
+										<span
+											class="text-primary fw-medium ms-2"
+											>Facebook Ads</span
+										>
+									</div>
+									<a
+										href="marketing"
+										class="text-decoration-none"
+									>
+										<i
+											class="ri-external-link-line fs-20"
+										></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div
+						class="rounded-3 mb-4 for-dark"
+						style="background-color: #dde4ff"
+					>
+						<div class="card-body p-4">
+							<div class="mb-4">
+								<h3 class="mb-0">
+									Instagram Campaigns
+									<span
+										class="bg-danger bg-opacity-10 text-danger fs-12 py-1 px-2 rounded-1"
+										>Live Now</span
+									>
+								</h3>
+							</div>
+
+							<div class="d-flex justify-content-between mb-3">
+								<div>
+									<div class="d-flex align-items-center mb-2">
+										<span
+											class="d-inline-block rounded-circle bg-primary-div position-relative top-1"
+											style="width: 10px; height: 10px"
+										></span>
+										<span class="ms-2"
+											>Campaign Budget</span
+										>
+									</div>
+									<h3 class="fs-24 mb-0">$3200</h3>
+								</div>
+								<div>
+									<div class="d-flex align-items-center mb-2">
+										<span
+											class="d-inline-block rounded-circle bg-danger position-relative top-1"
+											style="width: 10px; height: 10px"
+										></span>
+										<span class="ms-2">Followers Goal</span>
+									</div>
+									<h3 class="fs-24 mb-0">140,000</h3>
+								</div>
+							</div>
+
+							<div style="margin: -55px -11px -30px -12px">
+								<div id="instagram_campaigns"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-3 col-md-4">
+			<div
+				class="border-0 rounded-3 mb-4 text-center"
+				style="
+					background: linear-gradient(
+						162deg,
+						#d7b5fd 3.82%,
+						#9947f5 98.54%
+					);
+				"
+			>
+				<div class="card-body p-4 text-center">
+					<span class="fs-24 d-block text-secondary"
+						>Want To Try</span
+					>
+					<h3 class="fs-24 text-secondary">
+						New Marketing <br />
+						Tool?
+					</h3>
+					<div class="py-4 mb-3">
+						<img
+							src="/assets/images/marketing-tool.png"
+							alt="marketing-tool"
+						/>
+					</div>
+					<a
+						href="contact"
+						class="d-inline-block py-2 px-4 btn btn-primary border-0"
+						style="background-color: #6a22a7"
+					>
+						Contact Us
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-9 col-md-8">
+			<div class="card bg-white border-0 rounded-3 mb-4">
+				<div class="card-body p-4">
+					<div
+						class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3 mb-lg-30"
+					>
+						<h3 class="mb-0">Instagram Subscriber</h3>
+						<div class="dropdown action-opt">
+							<button
+								class="btn bg-transparent p-0"
+								type="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								<i data-feather="more-horizontal"></i>
+							</button>
+							<ul
+								class="dropdown-menu dropdown-menu-end bg-white border box-shadow"
+							>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="clock"></i>
+										Today
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="pie-chart"></i>
+										Last 7 Days
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="rotate-cw"></i>
+										Last Month
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="calendar"></i>
+										Last 1 Year
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="bar-chart"></i>
+										All Time
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="eye"></i>
+										View
+									</a>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="javascript:;"
+									>
+										<i data-feather="trash"></i>
+										Delete
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div style="margin: -25px -28px -16px -17px">
+						<div id="instagram_subscriber"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ template "dashboard_bottom" . }}

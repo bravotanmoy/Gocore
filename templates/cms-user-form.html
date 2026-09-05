@@ -1,0 +1,69 @@
+{{ template "dashboard_top" . }}
+
+<div class="main-content-container overflow-hidden">
+	<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+		<h3 class="mb-0">{{ .title }}</h3>
+		<a href="/dashboard/cms/users" class="btn btn-outline-secondary py-2 px-3">Back to Users</a>
+	</div>
+
+	{{ if .flash }}<div class="alert alert-info">{{ .flash }}</div>{{ end }}
+
+	<div class="card bg-white border-0 rounded-3 mb-4">
+		<div class="card-body p-4">
+			<form method="post" action="{{ if .isEdit }}/dashboard/cms/users/{{ .target.ID }}{{ else }}/dashboard/cms/users{{ end }}">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Full Name *</label>
+							<input type="text" name="name" class="form-control" required value="{{ .target.Name }}" placeholder="e.g. Jane Doe" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Email *</label>
+							<input type="email" name="email" class="form-control" required value="{{ .target.Email }}" placeholder="user@example.com" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Password {{ if .isEdit }}(leave blank to keep current){{ else }}*{{ end }}</label>
+							<input type="password" name="password" class="form-control" placeholder="Min 6 characters" {{ if not .isEdit }}required{{ end }} />
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Phone</label>
+							<input type="text" name="phone" class="form-control" value="{{ .target.Phone }}" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Status</label>
+							<select name="status" class="form-select form-control">
+								<option value="active" {{ if eq .target.Status "active" }}selected{{ end }}>Active</option>
+								<option value="pending" {{ if eq .target.Status "pending" }}selected{{ end }}>Pending</option>
+								<option value="blocked" {{ if eq .target.Status "blocked" }}selected{{ end }}>Blocked</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group mb-4">
+					<label class="label text-secondary mb-2 d-block">Roles</label>
+					<div class="d-flex flex-wrap gap-4">
+						{{ range .roles }}
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" name="role_ids" value="{{ .ID }}" id="role{{ .ID }}" {{ if .Checked }}checked{{ end }} />
+							<label class="form-check-label" for="role{{ .ID }}">{{ .DisplayName }}</label>
+						</div>
+						{{ end }}
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary py-2 px-4">Save User</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+{{ template "dashboard_bottom" . }}

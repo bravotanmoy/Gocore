@@ -1,0 +1,62 @@
+{{ template "dashboard_top" . }}
+
+<div class="main-content-container overflow-hidden">
+	<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+		<h3 class="mb-0">{{ .title }}</h3>
+		<a href="/dashboard/cms/roles" class="btn btn-outline-secondary py-2 px-3">Back to Roles</a>
+	</div>
+
+	{{ if .flash }}<div class="alert alert-info">{{ .flash }}</div>{{ end }}
+
+	<div class="card bg-white border-0 rounded-3 mb-4">
+		<div class="card-body p-4">
+			<form method="post" action="{{ if .isEdit }}/dashboard/cms/roles/{{ .role.ID }}{{ else }}/dashboard/cms/roles{{ end }}">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Role Name (slug) *</label>
+							<input type="text" name="name" class="form-control" value="{{ .role.Name }}" {{ if .role.IsSystem }}readonly{{ else }}required{{ end }} placeholder="e.g. shop-manager" />
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Display Name</label>
+							<input type="text" name="display_name" class="form-control" value="{{ .role.DisplayName }}" placeholder="e.g. Shop Manager" />
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group mb-4">
+							<label class="label text-secondary mb-1">Description</label>
+							<input type="text" name="description" class="form-control" value="{{ .role.Description }}" />
+						</div>
+					</div>
+				</div>
+
+				{{ if eq .role.Name "super-admin" }}
+				<div class="alert alert-warning">Super Admin implicitly holds every permission — the matrix below is ignored for it.</div>
+				{{ end }}
+
+				<label class="label text-secondary mb-2 d-block">Permissions</label>
+				<div class="row">
+					{{ range .groups }}
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+						<div class="border rounded-3 p-3 h-100">
+							<h6 class="fs-14 fw-semibold text-capitalize mb-2">{{ .Group }}</h6>
+							{{ range .Perms }}
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="permission_ids" value="{{ .ID }}" id="perm{{ .ID }}" {{ if .Checked }}checked{{ end }} />
+								<label class="form-check-label fs-13" for="perm{{ .ID }}">{{ .Name }}</label>
+							</div>
+							{{ end }}
+						</div>
+					</div>
+					{{ end }}
+				</div>
+
+				<button type="submit" class="btn btn-primary py-2 px-4">Save Role</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+{{ template "dashboard_bottom" . }}
