@@ -138,5 +138,6 @@ func Seed() error {
 		}
 	}
 
-	return nil
+	// 6. Site content structure (categories, products, pages, menus)
+	return seedYadeaContent()
 }
